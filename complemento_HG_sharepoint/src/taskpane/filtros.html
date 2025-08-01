@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hojas</title>
+
+      
+        <!-- Office JavaScript API -->
+        <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+
+        <!-- For more information on Fluent UI, visit https://developer.microsoft.com/fluentui#/. -->
+        <link rel="stylesheet" href="https://res-1.cdn.office.net/files/fabric-cdn-prod_20230815.002/office-ui-fabric-core/11.1.0/css/fabric.min.css"/>
+
+        <!-- Template styles -->
+        <link href="taskpane.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <header >
+           
+        </header>
+        <main>
+            <ul>
+                <li><a href="taskpane.html">Inicio</a></li>
+                <li><a href="hojas.html">Hojas</a></li>
+                <li><a class="active" href="filtros.html">Filtros</a></li>
+                <li><a href="L_general.html">L_general</a></li>
+                <li><a href="prueba.html">Prueba</a></li>
+            </ul>
+            
+            <div>
+                <h2>Selecciona la columna que quiera visualizar:</h2>
+                <div id="buttonsFiltros">
+                    <button id="visualizarTodo">Visualizar todo</button>
+                    <button id="ocultarTodo">Ocultar todo</button>
+                    <button id="guardar">Guardar</button>
+                    <select id="filtrosPredeterminados">
+                        <option value="">-- Selecciona vista --</option>
+                    </select>
+                    <button id="quitarFiltros">Quitar filtros</button>
+                </div> 
+                <div id="buttonsContainer"></div>
+                <div id="toastGuardado" style="
+                    display: none;
+                    position: fixed;
+                    bottom: 30px;
+                    right: 30px;
+                    color: white;
+                    padding: 12px 20px;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                    z-index: 1000;
+                    font-size: 14px;
+                    ">
+                    Guardado correctamente.
+                </div>          
+            </div>
+            
+        </main>
+        <script src="./filtros.ts"></script>
+    </body>
+</html>

@@ -1,0 +1,126 @@
+/* 
+ * Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license.
+ * See LICENSE in the project root for license information.
+ */
+
+html,
+body {
+  font-family:Arial, Helvetica, sans-serif;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  min-width: 100px;
+}
+main div{
+  margin: 10px;
+  margin-bottom: 40px;
+}
+
+/* Nav Bar */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #cbcbcb;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #000;
+  text-align: center;
+  padding:6px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: rgb(244, 244, 244);
+}
+
+.active {
+  background-color: white;
+}
+/* fin Nav Bar */
+
+
+
+#buttonsFiltros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+  justify-content: flex-start; /* o space-between si quieres separación completa */
+}
+
+#buttonsFiltros > * {
+  flex: 1 1 calc(50% - 6px); /* 2 elementos por fila, restando el gap */
+  box-sizing: border-box;
+  min-width: 100px; /* puedes ajustar esto */
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+#buttonsFiltros button,
+#buttonsFiltros select {
+  text-align: left;
+  width: 100%;
+  padding: 2px 5px;
+  margin: 1px 0;
+  min-width: 5px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  color: black;
+  cursor: pointer;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+button:disabled,
+select:disabled  {
+  background-color: #ccc !important;
+  color: #666 !important;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+#buttonsContainer{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+};
+#buttonsContainer button {
+  padding: 5px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  min-width: 120px;
+  text-align: right; /* 👈 Esto alinea el texto a la izquierda */
+}
+
+
+#buttonsContainer button:hover {
+  background-color: #ddd;
+}
+
+/* 👇 Aquí está el color al hacer clic */
+#buttonsContainer button.activo {
+  background-color: #888;
+  color: white;
+}
+
+h2{
+  margin: 5px;
+  font-size: 16px;
+}
+

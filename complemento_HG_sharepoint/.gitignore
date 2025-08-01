@@ -1,0 +1,7 @@
+# No subir dependencias ni build
+node_modules/
+dist/
+.vscode/
+.DS_Store
+*.log
+.env
